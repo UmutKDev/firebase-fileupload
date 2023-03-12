@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply h-screen w-full;
+  @apply flex flex-col items-center justify-center;
+  @apply bg-[url('/bg.jpg')] bg-cover bg-fixed bg-clip-content bg-center bg-no-repeat backdrop-blur-sm backdrop-brightness-50;
+}
