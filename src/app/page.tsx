@@ -9,7 +9,7 @@ const Home = () => {
   const [progress, setProgress] = useState<number>(0);
   const [error, setError] = useState<string>("");
 
-  const handleFileChange = (e) => {
+  const handleFileChange = (e: any) => {
     const file = e.target.files[0];
     if (
       (file && file.type === "image/svg+xml") ||
