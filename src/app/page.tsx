@@ -6,7 +6,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 const Home = () => {
   const [formFile, setFormFile] = useState<File>();
   const [downloadURL, setDownloadURL] = useState<string>("");
-  const [progress, setProgress] = useState<number>(0);
+  const [progress, setProgress] = useState<number | any>(0);
   const [error, setError] = useState<string>("");
 
   const handleFileChange = (e: any) => {
@@ -53,7 +53,7 @@ const Home = () => {
         <div className="flex h-full w-3/6 flex-col items-center justify-center">
           <div className="mb-1 flex w-full justify-between">
             <span className="text-sm font-medium text-blue-700 dark:text-white">
-              {formFile.name}
+              {formFile?.name}
             </span>
             <span className="text-sm font-medium text-blue-700 dark:text-white">
               {progress}%
